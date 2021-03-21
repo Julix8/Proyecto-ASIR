@@ -115,7 +115,7 @@ session_start();
 					<div class="card-body">
 						<a class="text-dark" href="pages/administrar_cuenta.php">
 							<h5 class="card-title fw-bold">Administrar cuenta</h5>
-							<p class="card-text ">¿Información incorrecta?<br>Cambia tu contraseña, email o usuario.</p>
+							<p class="card-text">¿Información incorrecta?<br>Cambia tu contraseña, email o usuario.</p>
 							<button class="btn btn-secondary">Administrar cuenta</button>
 						</a>
 					</div>
