@@ -18,7 +18,7 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor()
-mycursor.execute("SELECT u.avisos, u.id_usuario, u.nombre, u.email, t.nombre, t.descripcion, t.fecha, t.avisada FROM usuarios u, tareas t WHERE u.id_usuario = t.id_usuario AND t.avisada = 0 AND t.fecha <= CURDATE()+u.avisos")
+mycursor.execute("SELECT u.id_usuario, u.nombre, u.email, t.nombre, t.descripcion, t.fecha, t.id_tarea, t.hora, t.avisada, u.avisos FROM usuarios u, tareas t WHERE u.id_usuario = t.id_usuario AND t.avisada = 0 AND t.fecha <= CURDATE()+u.avisos")
 myresult = mycursor.fetchall()
 
 for x in myresult:
@@ -28,17 +28,21 @@ for x in myresult:
   nombre_tarea = x[3]
   descripcion = x[4]
   fecha = x[5]
+  id_tarea = x[6]
+  hora = x[7]
 
   asunto = "Tu tarea <{}> expira pronto.".format(nombre_tarea)
-  cuerpo = "La tarea <{}> expirara el dia {}. \nDescripcion: {}".format(nombre_tarea, fecha, descripcion)
+  cuerpo = "<h2>La tarea '<i>{}</i>' expirará el día '<i>{}</i>' a las '<i>{}</i>'.</h2><p><b>Descripción:</b> '{}'</p><br>-----------------------<br><h3>Accede a tu cuenta: <a href='localhost/proyecto/inicio.php'>Sorted.es</a></h3>".format(nombre_tarea, fecha, hora, descripcion)
 
-  msg = EmailMessage()
+  msg = MIMEText(cuerpo ,'html')
   msg['Subject'] = asunto
   msg['From'] = EMAIL_ADDRESS
-  msg['To'] = 'becomesorted@gmail.com'
-
-  msg.set_content(cuerpo)
+  msg['To'] = email
 
   with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
     smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
     smtp.send_message(msg)
+
+  sql = "UPDATE tareas SET avisada = 1 WHERE id_tarea = '%s'" % id_tarea
+  mycursor.execute(sql)
+  mydb.commit()
