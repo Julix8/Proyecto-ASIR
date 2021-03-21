@@ -57,7 +57,7 @@ session_start();
 					<a href="../archivos.php"><i class="bi bi-folder2-open icon"></i> &nbsp Mis archivos</a>
 				</li>
 				<li class="mb-4">
-					<a href="#"><i class="bi bi-bell icon"></i> &nbsp Notificaciones</a>
+					<a href="modificar_notificaciones.php"><i class="bi bi-bell icon"></i> &nbsp Notificaciones</a>
 				</li>
 				<li class="mb-4">
 					<a href="#"><i class="bi bi-trophy icon"></i> &nbsp Metas</a>
@@ -90,7 +90,7 @@ session_start();
 				<a href="../archivos.php"><i class="bi bi-folder2-open icon"></i></a>
 			</li>
 			<li class="mb-5">
-				<a href="#!"><i class="bi bi-bell icon"></i></a>
+				<a href="modificar_notificaciones.php"><i class="bi bi-bell icon"></i></a>
 			</li>
 			<li class="mb-5">
 				<a href="#!"><i class="bi bi-trophy bi icon"></i></a>

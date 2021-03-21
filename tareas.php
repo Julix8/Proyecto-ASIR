@@ -100,14 +100,14 @@ $count3 = mysqli_num_rows($result3);
 					<a href="archivos.php"><i class="bi bi-folder2-open icon"></i> &nbsp Mis archivos</a>
 				</li>
 				<li class="mb-4">
-					<a href="#"><i class="bi bi-bell icon"></i> &nbsp Notificaciones</a>
+					<a href="pages/modificar_notificaciones.php"><i class="bi bi-bell icon"></i> &nbsp Notificaciones</a>
 				</li>
 				<li class="mb-4">
 					<a href="#"><i class="bi bi-trophy icon"></i> &nbsp Metas</a>
 				</li>
 
 				<li class="mb-5 pb-4 opciones">
-					<a href="#"><i class="bi bi-gear icon"></i> &nbsp Configuración</a>
+					<a href="configuracion.php"><i class="bi bi-gear icon"></i> &nbsp Configuración</a>
 				</li>
 				<li class="mb-4 pb-2 opciones">
 					<a href="destroy.php"><i class="bi bi-box-arrow-left icon"></i> &nbsp Desconectar</a>
@@ -133,7 +133,7 @@ $count3 = mysqli_num_rows($result3);
 				<a href="archivos.php"><i class="bi bi-folder2-open icon"></i></a>
 			</li>
 			<li class="mb-5">
-				<a href="#!"><i class="bi bi-bell icon"></i></a>
+				<a href="pages/modificar_notificaciones.php"><i class="bi bi-bell icon"></i></a>
 			</li>
 			<li class="mb-5">
 				<a href="#!"><i class="bi bi-trophy bi icon"></i></a>
