@@ -48,7 +48,7 @@ session_start();
 			</div>
 			<ul>
 				<li class="mb-4">
-					<a href="#"><i class="bi bi-house-door icon"></i> &nbsp Inicio</a>
+					<a href="../inicio.php"><i class="bi bi-house-door icon"></i> &nbsp Inicio</a>
 				</li>
 				<li class="mb-4">
 					<a href="tareas.php"><i class="bi bi-list-task icon"></i> &nbsp Tareas</a>
