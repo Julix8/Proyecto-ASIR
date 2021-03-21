@@ -67,7 +67,7 @@ session_start();
 					<a href="#"><i class="bi bi-gear icon"></i> &nbsp Configuración</a>
 				</li>
 				<li class="mb-4 pb-2 opciones">
-					<a href="destroy.php"><i class="bi bi-box-arrow-left icon"></i> &nbsp Desconectar</a>
+					<a href="destroy.php"><i class="bi bi-box-arrow-left icon"></i>&nbsp Desconectar</a>
 				</li>
 			</ul>
 		</div>
