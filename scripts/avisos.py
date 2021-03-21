@@ -19,7 +19,7 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor()
-mycursor.execute("SELECT u.id_usuario, u.nombre, u.email, t.nombre, t.descripcion, t.fecha, t.id_tarea, t.hora, t.avisada, u.avisos FROM usuarios u, tareas t WHERE u.id_usuario = t.id_usuario AND t.avisada = 0 AND t.fecha <= CURDATE()+u.avisos")
+mycursor.execute("SELECT u.id_usuario, u.nombre, u.email, t.nombre, t.descripcion, t.fecha, t.id_tarea, t.hora, t.avisada, u.avisos FROM usuarios u, tareas t WHERE u.id_usuario = t.id_usuario AND t.avisada = 0 AND t.fecha <= CURDATE()+INTERVAL u.avisos DAY")
 myresult = mycursor.fetchall()
 
 for x in myresult:
