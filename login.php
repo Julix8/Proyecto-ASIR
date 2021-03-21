@@ -30,7 +30,6 @@
 			$_SESSION['id'] = $row['id_usuario'];
 			if (!file_exists("users/".$_SESSION['id']."/")) {
 		    	mkdir("users/".$_SESSION['id']."/", 0700, true);
-		    	copy("scripts/user_conf.py", "users/'.$_SESSION['id'].'/'");
 			}
 	    	header('location:inicio.php');
 			exit;
