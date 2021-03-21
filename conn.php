@@ -1,6 +1,6 @@
 <?php
 	$dbhost	= "localhost";
-	$dbuser	= "root";
+	$dbuser	= "admin";
 	$dbpass	= "rootroot";
 	$dbname	= "proyecto";
 
