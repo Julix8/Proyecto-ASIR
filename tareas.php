@@ -50,7 +50,7 @@ if (isset($_POST['crear'])) {
 		if (mysqli_query($conn, $sql5)) {
 			echo "<div style='text-align:center;position:absolute;width:100%;top:0;left:0;right:0;margin-left:auto;margin-right:auto;;z-index:10;' class='alert alert-success alert-dismissible fade show' role='alert'>Nueva tarea creada con éxito.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
 		} else {
-			echo "<div style='text-align:center;position:absolute;width:100%;top:0;left:0;right:0;margin-left:auto;margin-right:auto;;z-index:10;' class='alert alert-danger alert-dismissible fade show' role='alert'>Error al crear la nueva tarea.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>".mysql_error();
+			echo "<div style='text-align:center;position:absolute;width:100%;top:0;left:0;right:0;margin-left:auto;margin-right:auto;;z-index:10;' class='alert alert-danger alert-dismissible fade show' role='alert'>Error al crear la nueva tarea.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
 			
 		}
 	}
@@ -172,7 +172,7 @@ $count3 = mysqli_num_rows($result3);
 									<input type="hidden" name="id_tarea" value="<?php echo $row['id_tarea'];?>">
 									<input type="hidden" name="estado" value="<?php echo $row['estado'];?>">
 
-									<label for="borrar" class="btn"><i class="fas fa-trash-alt"></i></label>
+									<label for="borrar1_<?php echo $row['id_tarea'];?>" class="btn"><i class="fas fa-trash-alt"></i></label>
     								<input type="submit" class="visually-hidden" id="borrar1_<?php echo $row['id_tarea'];?>"/>
 
     								<label for="editar_<?php echo $row['id_tarea'];?>" class="btn"><i class="fas fa-edit"></i></label>
