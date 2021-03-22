@@ -49,7 +49,7 @@ session_start();
 		if (mysqli_query($conn, $sql2)) {
 			echo "<div style='text-align:center;position:absolute;width:100%;top:0;left:0;right:0;margin-left:auto;margin-right:auto;;z-index:10;' class='alert alert-success alert-dismissible fade show' role='alert'>Nueva tarea creada con éxito.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
 		} else {
-			echo "<div style='text-align:center;position:absolute;width:100%;top:0;left:0;right:0;margin-left:auto;margin-right:auto;;z-index:10;' class='alert alert-danger alert-dismissible fade show' role='alert'>Error al crear la nueva tarea.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+			echo "<div style='text-align:center;position:absolute;width:100%;top:0;left:0;right:0;margin-left:auto;margin-right:auto;;z-index:10;' class='alert alert-danger alert-dismissible fade show' role='alert'>Error al crear la nueva tarea.<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>".mysql_error();
 			
 		}
 	}
