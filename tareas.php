@@ -167,7 +167,7 @@ $count3 = mysqli_num_rows($result3);
 									<input type="hidden" name="estado" value="<?php echo $row['estado'];?>">
 
 									<label for="borrar" class="btn"><i class="fas fa-trash-alt"></i></label>
-    								<input type="submit" class="visually-hidden" id="borrar"/>
+    								<input type="submit" class="visually-hidden" id="borrar1_<?php echo $row['id_tarea'];?>"/>
 
     								<label for="editar_<?php echo $row['id_tarea'];?>" class="btn"><i class="fas fa-edit"></i></label>
 									<input type="button" id="editar_<?php echo $row['id_tarea'];?>" class="visually-hidden" onclick="editar(<?php echo $row['id_tarea'];?>)">
@@ -202,7 +202,7 @@ $count3 = mysqli_num_rows($result3);
 									<input type="submit" id="retroceder_<?php echo $row2['id_tarea'];?>" class="visually-hidden" formaction="pages/retroceder.php">
 
 									<label for="borrar2_<?php echo $row2['id_tarea'];?>" class="btn"><i class="fas fa-trash-alt"></i></label>
-    								<input type="submit" class="visually-hidden" id="borrar"/>
+    								<input type="submit" class="visually-hidden" id="borrar2_<?php echo $row2['id_tarea'];?>"/>
 
     								<label for="editar2_<?php echo $row2['id_tarea'];?>" class="btn"><i class="fas fa-edit"></i></label>
 									<input type="button" id="editar2_<?php echo $row2['id_tarea'];?>" class="visually-hidden" onclick="editar(<?php echo $row2['id_tarea'];?>)">
