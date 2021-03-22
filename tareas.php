@@ -86,7 +86,7 @@ $count3 = mysqli_num_rows($result3);
 				<img class="logo" src="img/sorted.png">
 				<div class="py-4 mb-3">
 					<img src="img/person1.jpg" class="mr-3 rounded-circle imagen">
-					<span class="nombre fs-4 mx-3 text-muted">Juli el Gato</span>
+					<span class="nombre fs-4 mx-3 text-muted"><?php echo $nombre;?></span>
 				</div>
 			</div>
 			<ul>
